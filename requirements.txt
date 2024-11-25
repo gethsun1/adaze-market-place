@@ -1,0 +1,11 @@
+asgiref==3.8.1
+-e git+https://github.com/django/django.git@857b1048d53ebf5fc5581c110e85c212b81ca83a#egg=Django
+django-environ==0.11.2
+django-jazzmin==3.0.1
+gunicorn==23.0.0
+packaging==24.2
+pillow==11.0.0
+psycopg2-binary==2.9.10
+PyMySQL==1.1.1
+sqlparse==0.5.2
+whitenoise==6.8.2
