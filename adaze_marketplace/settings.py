@@ -17,7 +17,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = env("SECRET_KEY", default="django-insecure-default-key-for-dev")
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["localhost"])
+
+# ALLOWED_HOSTS
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["localhost", "127.0.0.1", "adaze.com", "learning-active-heron.ngrok-free.app"])
+
 
 # Application definition
 INSTALLED_APPS = [
@@ -72,8 +75,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': env('DB_NAME', default='adaze_marketplace'),
         'USER': env('DB_USER', default='adaze_user'),
-        'PASSWORD': env('DB_PASSWORD', default='patmat'),
-        'HOST': env('DB_HOST', default='localhost'),
+        'PASSWORD': env('DB_PASSWORD', default='oE7nwEoqz6NU5A6QzKi1zt1EUmrQhzmk'),
+        'HOST': env('DB_HOST', default='dpg-ct3kio9u0jms73a1nibg-a'),
         'PORT': env('DB_PORT', default='5432'),
     }
 }
@@ -108,7 +111,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'users.CustomUser'
 
 # CSRF trusted origins
-CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=[])
+# CSRF trusted origins
+CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=["https://learning-active-heron.ngrok-free.app"])
 
 # Jazzmin settings for admin interface customization
 JAZZMIN_SETTINGS = {
