@@ -19,7 +19,7 @@ DEBUG = env("DEBUG")
 
 
 # ALLOWED_HOSTS
-ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["localhost", "127.0.0.1", "adaze.com", "learning-active-heron.ngrok-free.app"])
+ALLOWED_HOSTS = env.list("ALLOWED_HOSTS", default=["localhost", "127.0.0.1", "adaze.com", "adaze-market-place.onrender.com"])
 
 
 # Application definition
@@ -112,7 +112,7 @@ AUTH_USER_MODEL = 'users.CustomUser'
 
 # CSRF trusted origins
 # CSRF trusted origins
-CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=["https://learning-active-heron.ngrok-free.app"])
+CSRF_TRUSTED_ORIGINS = env.list("CSRF_TRUSTED_ORIGINS", default=["https://adaze-market-place.onrender.com"])
 
 # Jazzmin settings for admin interface customization
 JAZZMIN_SETTINGS = {
