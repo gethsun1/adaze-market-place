@@ -4,7 +4,7 @@ Django settings for adaze_marketplace project.
 
 import os
 from pathlib import Path
-import environ
+import environ 
 
 # Initialize environment variables
 env = environ.Env(DEBUG=(bool, False))
@@ -15,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Security settings
 SECRET_KEY = env("SECRET_KEY", default="django-insecure-default-key-for-dev")
-DEBUG = env("DEBUG")
+DEBUG = True
 
 
 # ALLOWED_HOSTS
@@ -73,11 +73,11 @@ WSGI_APPLICATION = 'adaze_marketplace.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': env('DB_NAME', default='adaze_marketplace'),
-        'USER': env('DB_USER', default='adaze_user'),
-        'PASSWORD': env('DB_PASSWORD', default='oE7nwEoqz6NU5A6QzKi1zt1EUmrQhzmk'),
-        'HOST': env('DB_HOST', default='dpg-ct3kio9u0jms73a1nibg-a'),
-        'PORT': env('DB_PORT', default='5432'),
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST', default='localhost'),
+        'PORT': env('DB_PORT'),
     }
 }
 
